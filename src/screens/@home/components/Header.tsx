@@ -3,10 +3,18 @@
 import theme from "@/theme";
 import { Anchor, Flex, Image, NavLink, Title } from "@mantine/core";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 const Header = () => {
+  const navLinks = [{ name: "Home" }, { name: "About" }, { name: "Projects" }];
+
   return (
-    <header style={{ width: "100%" }}>
+    <motion.header
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 1.2, delay: 0.4 }}
+      style={{ width: "100%" }}
+    >
       <Flex h={96} w="100%" justify="space-between" align="center">
         <Link href="/" style={{ textDecoration: "none" }}>
           <Flex align="center">
@@ -19,36 +27,22 @@ const Header = () => {
         </Link>
 
         <Flex gap={32}>
-          <Anchor
-            tt="uppercase"
-            td="none"
-            size="14px"
-            fw={600}
-            c={theme.neutralOne}
-          >
-            Home
-          </Anchor>
-          <Anchor
-            tt="uppercase"
-            td="none"
-            size="14px"
-            fw={600}
-            c={theme.neutralOne}
-          >
-            About
-          </Anchor>
-          <Anchor
-            tt="uppercase"
-            td="none"
-            size="14px"
-            fw={600}
-            c={theme.neutralOne}
-          >
-            Projects
-          </Anchor>
+          {navLinks.map((link) => (
+            <Anchor
+              key={link.name}
+              href={`/${link.name.toLocaleLowerCase()}`}
+              c={theme.neutralOne}
+              tt="uppercase"
+              td="none"
+              size="14px"
+              fw={600}
+            >
+              {link.name}
+            </Anchor>
+          ))}
         </Flex>
       </Flex>
-    </header>
+    </motion.header>
   );
 };
 
