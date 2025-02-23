@@ -13,6 +13,7 @@ const Header = () => {
       initial={{ scale: 0, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 1.2, delay: 0.4 }}
+      viewport={{ once: true }}
       style={{ width: "100%" }}
     >
       <Flex h={96} w="100%" justify="space-between" align="center">
