@@ -3,6 +3,9 @@ const theme = {
   bg: "linear-gradient(to bottom, rgba(1, 1, 1, 1), rgba(3, 3, 3, .98))",
   bgHover:
     "linear-gradient(to bottom, rgba(10, 10, 10, 1), rgba(20, 20, 20, 0.98))",
+  bgButton:
+    "linear-gradient(to bottom, rgba(30, 30, 30, 1), rgba(50, 50, 50, 0.98))",
+
   neutralOne: "#E3E4E6",
   neutralTwo: "#E3E4E68C",
 };

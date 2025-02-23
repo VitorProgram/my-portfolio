@@ -1,0 +1,15 @@
+.button-mantine {
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 30, 30, 1),
+    rgba(50, 50, 50, 0.98)
+  );
+}
+
+.button-mantine:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 1),
+    rgba(20, 20, 20, 0.98)
+  );
+}

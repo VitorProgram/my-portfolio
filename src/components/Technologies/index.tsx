@@ -12,6 +12,7 @@ const Technologies = () => {
     { path: "/technologies/nextjs.svg" },
     { path: "/technologies/figma.svg" },
     { path: "/technologies/git.svg" },
+    { path: "/technologies/mantine.svg" },
   ];
 
   return (
@@ -20,7 +21,7 @@ const Technologies = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.5 }}
-        viewport={{ amount: 1, once: true }}
+        viewport={{ amount: 1 }}
       >
         <Title
           order={2}
@@ -36,16 +37,28 @@ const Technologies = () => {
         </Title>
       </motion.div>
 
-      <Flex w="100%" maw={600} justify="space-around" gap={32} wrap="wrap">
+      <Flex
+        w="100%"
+        maw={600}
+        justify="space-around"
+        gap={32}
+        wrap="wrap"
+        style={{ zIndex: 999 }}
+      >
         {technologiesData.map((tech, index) => (
           <motion.div
             key={tech.path}
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ amount: 0.5, once: true }} // Garante que só anima uma vez
+            viewport={{ amount: 0.5 }}
           >
-            <Image className="image-mantine" src={tech.path} w={40} />
+            <Image
+              radius={8}
+              className="image-mantine"
+              src={tech.path}
+              w={40}
+            />
           </motion.div>
         ))}
       </Flex>
