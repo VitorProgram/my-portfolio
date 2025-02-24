@@ -51,7 +51,7 @@ const Projects = () => {
   ];
 
   return (
-    <Stack mt={80} gap={32}>
+    <Stack id="projects" pt={100} gap={32}>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

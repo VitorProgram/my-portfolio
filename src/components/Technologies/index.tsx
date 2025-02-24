@@ -16,7 +16,7 @@ const Technologies = () => {
   ];
 
   return (
-    <Stack align="center" gap={64}>
+    <Stack id="techs" align="center" gap={64} mih="50vh" justify="center">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -24,7 +24,6 @@ const Technologies = () => {
         viewport={{ amount: 1 }}
       >
         <Title
-          order={2}
           fw={500}
           c={theme.neutralTwo}
           style={{

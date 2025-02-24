@@ -1,3 +1,4 @@
+import InviteEmail from "@/components/InviteEmail";
 import Home from "@/components/Home";
 import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
@@ -9,6 +10,7 @@ const App = () => {
       <Home />
       <Technologies />
       <Projects />
+      <InviteEmail />
     </Box>
   );
 };

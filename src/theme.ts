@@ -1,4 +1,5 @@
 const theme = {
+  white: "#FFF",
   primary: "#bc3cd8", // cor sólida semelhante ao gradiente inicial
   bg: "linear-gradient(to bottom, rgba(1, 1, 1, 1), rgba(3, 3, 3, .98))",
   bgHover:

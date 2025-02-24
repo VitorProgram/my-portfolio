@@ -6,7 +6,11 @@ import Link from "next/link";
 import { motion } from "motion/react";
 
 const Header = () => {
-  const navLinks = [{ name: "Home" }, { name: "About" }, { name: "Projects" }];
+  const navLinks = [
+    { name: "Home" },
+    { name: "Projects" },
+    { name: "Contact" },
+  ];
 
   return (
     <motion.header
@@ -31,7 +35,7 @@ const Header = () => {
           {navLinks.map((link) => (
             <Anchor
               key={link.name}
-              href={`/${link.name.toLocaleLowerCase()}`}
+              href={`#${link.name.toLocaleLowerCase()}`}
               c={theme.neutralOne}
               tt="uppercase"
               td="none"

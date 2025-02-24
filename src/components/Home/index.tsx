@@ -28,7 +28,8 @@ const Home = () => {
         <DownloadCVButton />
       </Stack>
 
-      <motion.div
+      <motion.a
+        href="#techs"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
@@ -41,7 +42,7 @@ const Home = () => {
         <ActionIcon variant="transparent">
           <Image src="/chevron-down.svg" w={40} />
         </ActionIcon>
-      </motion.div>
+      </motion.a>
 
       {/* Spotlight Animation */}
       <div className="box">
