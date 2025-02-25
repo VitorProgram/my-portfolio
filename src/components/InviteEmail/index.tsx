@@ -1,14 +1,6 @@
 "use client";
 import theme from "@/theme";
-import {
-  ActionIcon,
-  Anchor,
-  Button,
-  Flex,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
+import { ActionIcon, Button, Flex, Stack, Text, Title } from "@mantine/core";
 import { useHover, useMediaQuery } from "@mantine/hooks";
 import { motion } from "motion/react";
 import { useState } from "react";

@@ -53,7 +53,13 @@ const EducationDetailsCard = ({ title, data }: EducationDetailsCardProps) => {
               cursor: "pointer",
             }}
           >
-            <Image radius={8} w={50} h={50} src={item.imageUrl} />
+            <Image
+              radius={8}
+              w={50}
+              h={50}
+              src={item.imageUrl}
+              alt="Logo da instituição"
+            />
 
             <Stack gap={8}>
               <Title order={3} fw={600} c={theme.neutralOne}>

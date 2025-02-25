@@ -1,7 +1,7 @@
 "use client";
 
 import theme from "@/theme";
-import { Anchor, Flex, Image, NavLink, Title } from "@mantine/core";
+import { Anchor, Flex, Image, Title } from "@mantine/core";
 import Link from "next/link";
 import { motion } from "motion/react";
 
@@ -34,7 +34,7 @@ const Header = () => {
       <Flex h={50} w="100%" justify="space-between" align="center">
         <Link href="/" style={{ textDecoration: "none" }}>
           <Flex align="center">
-            <Image w={40} src="/logo.svg" />
+            <Image w={40} src="/logo.svg" alt="logo com nome Vitor" />
 
             <Title order={3} c={theme.neutralOne}>
               Vitor

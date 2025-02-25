@@ -1,6 +1,5 @@
 "use client";
-import theme from "@/theme";
-import { Box, Flex, Image, Stack, Table, Text, Title } from "@mantine/core";
+import { Stack } from "@mantine/core";
 import EducationDetailsCard from "./components/EducationDetailsCard";
 import { dataAchievements, dataFormation } from "./detailsData";
 

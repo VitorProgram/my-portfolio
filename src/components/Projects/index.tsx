@@ -88,6 +88,7 @@ const Projects = () => {
               }
             >
               <Image
+                alt="Imagem do projeto"
                 flex={1}
                 radius={20}
                 src={project.imageUrl}
