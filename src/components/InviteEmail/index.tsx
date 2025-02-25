@@ -110,8 +110,8 @@ const InviteEmail = () => {
       <motion.footer
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.3, delay: 0.5 }}
-        viewport={{ amount: 1 }}
+        transition={{ duration: 0.3 }}
+        viewport={{ amount: 0.2 }}
         style={{
           width: "100%",
         }}
