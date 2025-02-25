@@ -9,7 +9,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { useHover } from "@mantine/hooks";
+import { useHover, useMediaQuery } from "@mantine/hooks";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { FaCheck, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -17,6 +17,8 @@ import { IoMdCopy } from "react-icons/io";
 
 const InviteEmail = () => {
   const { hovered, ref } = useHover();
+  const isMobile = useMediaQuery("(max-width: 600px)");
+
   const [copied, setCopied] = useState<boolean>(false);
 
   const email = "joaovitornascimentoif@gmail.com";
@@ -45,7 +47,13 @@ const InviteEmail = () => {
             transition={{ duration: 1.5, delay: 0.5 }}
             viewport={{ amount: 1 }}
           >
-            <Title fw={600} c={theme.white} size="58px" maw={800} ta="center">
+            <Title
+              fw={600}
+              c={theme.white}
+              size={!isMobile ? "58px" : "38px"}
+              maw={800}
+              ta="center"
+            >
               Qual vai ser meu próximo projeto?
             </Title>
           </motion.div>
@@ -58,7 +66,7 @@ const InviteEmail = () => {
           >
             <Text
               c={theme.neutralTwo}
-              size="28px"
+              size={!isMobile ? "32px" : "24px"}
               fw={500}
               ta="center"
               style={{
@@ -116,12 +124,21 @@ const InviteEmail = () => {
           width: "100%",
         }}
       >
-        <Flex justify="space-between">
-          <Text c={theme.neutralOne} size="20px">
+        <Flex
+          w="100%"
+          justify={!isMobile ? "space-between" : "center"}
+          direction={!isMobile ? "row" : "column"}
+          gap={16}
+        >
+          <Text
+            c={theme.neutralOne}
+            size="20px"
+            ta={!isMobile ? "start" : "center"}
+          >
             © 2025 Vitor Silva. Todos os Direitos Reservados.
           </Text>
 
-          <Flex gap={32}>
+          <Flex gap={32} justify="center">
             <ActionIcon
               variant="transparent"
               size={30}

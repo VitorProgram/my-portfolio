@@ -17,11 +17,21 @@ const Header = () => {
     <motion.header
       initial={{ scale: 0, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 1.2, delay: 0.4 }}
+      transition={{ duration: 1, delay: 0.4 }}
       viewport={{ once: true }}
-      style={{ width: "100%" }}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        padding: "10px 32px",
+        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+        zIndex: 2000,
+        backdropFilter: "blur(10px)", // Efeito de blur no fundo
+        WebkitBackdropFilter: "blur(10px)", // Suporte para Safari
+      }}
     >
-      <Flex h={96} w="100%" justify="space-between" align="center">
+      <Flex h={50} w="100%" justify="space-between" align="center">
         <Link href="/" style={{ textDecoration: "none" }}>
           <Flex align="center">
             <Image w={40} src="/logo.svg" />

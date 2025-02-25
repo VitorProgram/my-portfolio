@@ -7,7 +7,7 @@ import EducationDetails from "@/components/EducationDetails";
 
 const App = () => {
   return (
-    <Box pr={112} pl={112}>
+    <Box pr={32} pl={32}>
       <Home />
       <Technologies />
       <Projects />

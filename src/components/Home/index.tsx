@@ -5,23 +5,35 @@ import theme from "@/theme";
 import "./animation.css";
 import DownloadCVButton from "./components/DownloadCVButton";
 import { motion } from "motion/react";
+import { useMediaQuery } from "@mantine/hooks";
 
 const Home = () => {
-  return (
-    <Stack h="100vh" align="center" justify="space-between" pb={42}>
-      <Header />
+  const isMobile = useMediaQuery("(max-width: 600px)");
 
-      <Stack align="center" gap={8}>
+  return (
+    <Stack id="home" h="100vh" align="center" justify="center">
+      {!isMobile && <Header />}
+
+      <Stack mb={42} align="center" gap={8}>
         <motion.div
           initial={{ opacity: 0, y: -60 }} // Começa invisível e um pouco acima
           animate={{ y: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <Title size="72px" ta="center" c={theme.neutralOne}>
+          <Title
+            size={!isMobile ? "72px" : "48px"}
+            ta="center"
+            c={theme.neutralOne}
+          >
             Vitor Silva
           </Title>
-          <Title ta="center" fw={500} c={theme.neutralTwo}>
+          <Title
+            size={!isMobile ? "32px" : "24px"}
+            ta="center"
+            fw={500}
+            c={theme.neutralTwo}
+          >
             Desenvolvedor Front-End
           </Title>
         </motion.div>
@@ -38,6 +50,7 @@ const Home = () => {
           transition: { duration: 0.4, delay: 0 },
         }}
         whileTap={{ scale: 1 }}
+        style={{ position: "absolute", bottom: "42px" }}
       >
         <ActionIcon variant="transparent">
           <Image src="/chevron-down.svg" w={40} />
