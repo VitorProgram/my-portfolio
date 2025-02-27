@@ -5,6 +5,8 @@ import "@mantine/core/styles.css";
 import { MantineProvider } from "@mantine/core";
 import theme from "@/theme";
 
+import "./style.css"
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

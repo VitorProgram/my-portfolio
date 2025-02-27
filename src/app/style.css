@@ -1,0 +1,22 @@
+/* Para navegadores baseados em WebKit */
+::-webkit-scrollbar {
+  width: 10px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #333; /* Cor do fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555; /* Cor do "puxador" da barra */
+  border-radius: 5px; /* Deixa o puxador arredondado */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Cor ao passar o mouse */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-color: #555 #333; /* thumb e track */
+}
