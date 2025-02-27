@@ -20,7 +20,7 @@ const Projects = () => {
         O Stock Flow é um sistema de gerenciamento de estoque para pequenas e médias empresas, focado em controle eficiente de produtos, entradas e saídas. Com uma interface moderna e intuitiva, oferece um dashboard interativo, notificações visuais e registros detalhados de movimentações.  
         Desenvolvido com Next.js, utiliza Mantine UI para estilização, Prisma ORM para banco de dados e Node.js + Express no backend. Tecnologias como React Query, React Hook Form e Motion garantem alta performance, usabilidade e animações fluidas, tornando a gestão de estoque mais ágil e prática.
       `,
-      imageUrl: "/stock-flow.webp",
+      imageUrl: "/stock-flow.svg",
       githubLink: "",
       portfolioLink: "",
     },
@@ -32,21 +32,21 @@ const Projects = () => {
         A plataforma possui rotas dinâmicas, permitindo que cada barbearia tenha uma página personalizada com informações detalhadas e serviços. O design mobile-first garante uma navegação fluida em qualquer dispositivo.  
         Desenvolvido com Next.js, Mantine UI, Prisma ORM, Node.js e Express, o projeto utiliza React Query e React Hook Form para eficiência na manipulação de dados e Motion para animações suaves, tornando o processo de agendamento mais simples e acessível.
       `,
-      imageUrl: "/barber-now.webp",
+      imageUrl: "/barber-now.svg",
       githubLink: "",
       portfolioLink: "",
     },
     {
       keyProject: Math.floor(Math.random() * 1000000),
-      name: "Verbalize",
+      name: "Mod Notes",
       description: `
-        Verbalize é um aplicativo que facilita a criação de audiodescrições para produtos e ambientes escolares, tornando a informação mais acessível para pessoas com deficiência visual.  
-        A plataforma permite que instituições de ensino e empresas gerem descrições detalhadas por meio de uma interface intuitiva, garantindo inclusão e acessibilidade. Com um design mobile-first, o usuário pode criar, editar e compartilhar audiodescrições de forma rápida e eficiente.  
-        Desenvolvido com Next.js, Mantine UI, Prisma ORM, Node.js e Express, o Verbalize utiliza React Query e React Hook Form para otimizar a manipulação de dados, além de Motion para animações suaves, proporcionando uma experiência fluida e acessível.
-      `,
-      imageUrl: "/verbalize.webp",
-      githubLink: "",
-      portfolioLink: "",
+        O Mod Notes é um aplicativo intuitivo e eficiente para criação e armazenamento de notas, oferecendo suporte tanto para notas em texto quanto por meio de áudio. Desenvolvido com React e Styled-Components, o projeto proporciona adição, exclusão, criação de notas por audio e a possibilidade de pesquisar entre as notas. As notas do usuário são armazenadas localmente no Local Storage, garantindo acesso rápido e seguro, mesmo sem conexão com a internet. Ideal para quem busca organização e praticidade no dia a dia,
+        Particularmente é um projeto que uso no meu ao decorrer da semana para organizar minhas proprias tarefas ou objetivos.
+    `,
+
+      imageUrl: "/modnotes-bg.svg",
+      githubLink: "https://github.com/VitorProgram/ModNotes",
+      portfolioLink: "https://mod-notes.vercel.app",
     },
   ];
 
@@ -124,6 +124,9 @@ const Projects = () => {
                     w={150}
                     radius={10}
                     leftSection={<FaGithub size={20} />}
+                    component="a"
+                    target="_blank"
+                    href={project.githubLink}
                   >
                     Github
                   </Button>
@@ -133,6 +136,9 @@ const Projects = () => {
                     w={150}
                     radius={10}
                     leftSection={<LuMonitorDot size={20} />}
+                    component="a"
+                    target="_blank"
+                    href={project.portfolioLink}
                   >
                     Online
                   </Button>
