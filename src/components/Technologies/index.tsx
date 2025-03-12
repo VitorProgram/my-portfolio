@@ -6,13 +6,13 @@ import "./style.css";
 
 const Technologies = () => {
   const technologiesData = [
-    { path: "/technologies/javascript.svg" },
-    { path: "/technologies/typescript.svg" },
-    { path: "/technologies/react.svg" },
-    { path: "/technologies/nextjs.svg" },
-    { path: "/technologies/figma.svg" },
-    { path: "/technologies/git.svg" },
-    { path: "/technologies/mantine.svg" },
+    { path: "/technologies/javascript.svg", name: "Javascript" },
+    { path: "/technologies/typescript.svg", name: "Typescript" },
+    { path: "/technologies/react.svg", name: "React" },
+    { path: "/technologies/nextjs.svg", name: "Nextjs" },
+    { path: "/technologies/figma.svg", name: "Figma" },
+    { path: "/technologies/git.svg", name: "Git" },
+    { path: "/technologies/mantine.svg", name: "Mantine" },
   ];
 
   return (
@@ -54,9 +54,10 @@ const Technologies = () => {
           >
             <Image
               radius={8}
-              className="image-mantine"
+              className="image"
               src={tech.path}
               w={40}
+              alt={`Ícone: ${tech.name}`}
             />
           </motion.div>
         ))}

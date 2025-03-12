@@ -11,12 +11,19 @@ const Home = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");
 
   return (
-    <Stack id="home" h="100vh" align="center" justify="center">
+    <Stack
+      id="home"
+      h="100vh"
+      align="center"
+      justify="center"
+      pos="relative"
+      style={{ zIndex: 1 }} // Garante que o conteúdo da Home esteja sobre as partículas
+    >
       {!isMobile && <Header />}
 
       <Stack mb={42} align="center" gap={8}>
         <motion.div
-          initial={{ opacity: 0, y: -60 }} // Começa invisível e um pouco acima
+          initial={{ opacity: 0, y: -60 }}
           animate={{ y: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -45,30 +52,18 @@ const Home = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        whileHover={{
-          scale: 1.2,
-          transition: { duration: 0.4, delay: 0 },
-        }}
+        whileHover={{ scale: 1.2, transition: { duration: 0.4, delay: 0 } }}
         whileTap={{ scale: 1 }}
         style={{ position: "absolute", bottom: "42px" }}
       >
         <ActionIcon variant="transparent">
-          <Image src="/chevron-down.svg" w={40} />
+          <Image
+            src="/chevron-down.svg"
+            w={40}
+            alt="Botão de descer para sessõa de tecnologias da página"
+          />
         </ActionIcon>
       </motion.a>
-
-      {/* Spotlight Animation */}
-      <div className="box">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
     </Stack>
   );
 };

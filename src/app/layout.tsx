@@ -3,9 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import "@mantine/core/styles.css";
 import { MantineProvider } from "@mantine/core";
-import theme from "@/theme";
 
-import "./style.css"
+import "./style.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,10 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
-      <body
-        style={{ background: theme.bg }}
-        className={`${geistSans.variable} ${geistMono.variable}`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <MantineProvider>{children}</MantineProvider>
       </body>
     </html>

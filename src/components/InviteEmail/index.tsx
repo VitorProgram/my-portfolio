@@ -24,7 +24,7 @@ const InviteEmail = () => {
   };
 
   return (
-    <Stack h="100vh" pb={42}>
+    <Stack h="100vh" pb={22}>
       <Stack
         id="contact"
         h="calc(100vh - 50px)"
